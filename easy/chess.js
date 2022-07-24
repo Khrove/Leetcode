@@ -1,0 +1,13 @@
+function chess(size) {
+    let board = '';
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            if ((i + j) % 2 === 0) board += " ";
+            else board += "#";
+        }
+        board += "\n"
+    }
+    return board;
+}
+
+console.log(chess(8));
