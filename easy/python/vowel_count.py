@@ -6,14 +6,10 @@
 
 # The input string will only consist of lower case letters and/or spaces.
 def vowelCount(string: str):
-    vowels = ['a', 'e', 'i', 'o', 'u']
-    arr = string.split()
     vowels = 0
-    for item in arr:
-        word = item.split()
-        for char in word:
-            if char in vowels:
-                vowels + 1
+    for item in string:
+        if item in 'AEIOUaeiou':
+            vowels += 1
     return vowels
 
 
