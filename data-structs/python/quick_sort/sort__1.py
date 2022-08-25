@@ -19,4 +19,4 @@ def quick_sort(sequence):
     return quick_sort(items_lower) + [pivot] + quick_sort(items_greater)
 
 
-print(quick_sort([5,6,7,7,7,77,5,4,3,21,2,345,67,43]))
+print(quick_sort([5, 6, 7, 7, 7, 77, 5, 4, 3, 21, 2, 345, 67, 43]))

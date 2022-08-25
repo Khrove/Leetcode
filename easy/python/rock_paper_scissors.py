@@ -40,4 +40,5 @@ class TestRPS(unittest.TestCase):
         self.assertEqual(rps('paper', 'rock'), 'Player 1 wins!', 'We expected Player 1 wins!')
         self.assertEqual(rps('', 'rock'), 'An input is required for both players', 'We expected an input to be provided by both players')
 
+
 unittest.main()

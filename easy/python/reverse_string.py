@@ -15,7 +15,7 @@ print(reverse_string("bingo"))
 
 def easy_solution(string: str):
     list1 = list(string)
-    list1.reverse();
+    list1.reverse()
     return ''.join(list1)
 
 
