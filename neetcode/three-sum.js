@@ -9,13 +9,20 @@ const threeSum = (arr) => {
     if (arr.length < 3) return;
 
     let answer = [];
-    let i = 0;
-    let j = i + 1;
-    let k = i + 2;
 
+    // Loading the answer array
     for (let i = 0; i < arr.length; i++) {
-        
+        for (let j = arr[i] + 1; j < arr.length; j++) {
+            if (arr[i] !== arr[j]) {
+                for (let k = arr[j] + 1; k < arr.length; k++) {
+                    if (arr[j] !== arr[k]) {
+                        if (arr[i] + arr[j] + arr[k] === 0) answer.push([arr[i], arr[j], arr[k]]);
+                    }
+                }
+            }
+        }
     }
+    console.log(answer);
 }
 
 console.log(threeSum([-1, 0, 1, 2, -1, -4]));
