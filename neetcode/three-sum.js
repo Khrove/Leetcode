@@ -10,6 +10,8 @@ const threeSum = (arr) => {
 
     let answer = [];
 
+    arr = arr.sort((a,b) => a - b );
+
     // Loading the answer array
     for (let i = 0; i < arr.length; i++) {
         for (let j = arr[i] + 1; j < arr.length; j++) {
@@ -22,7 +24,8 @@ const threeSum = (arr) => {
             }
         }
     }
-    console.log(answer);
+    let newans = Array.from(new Set(answer.map(JSON.stringify)), JSON.parse);
+    console.log(newans);
 }
 
 console.log(threeSum([-1, 0, 1, 2, -1, -4]));

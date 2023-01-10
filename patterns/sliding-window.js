@@ -29,8 +29,9 @@ const maxSubarraySum = (arr, target) => {
     // Start the array at target since weve already added up t he beginning target of numbers
     for (let i = target; i < arr.length; i++) {
         // First run through this looks like:
-        // 3 = 3 - 
+        // round 1 -- 3 - (2 - 2) + 2 == 5
         tempSum = tempSum - arr[i - target] + arr[i];
+        // 6 becomes maxSum because it's > 3
         maxSum = Math.max(maxSum, tempSum);
     }
     return maxSum;
