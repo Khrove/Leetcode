@@ -28,6 +28,10 @@ const areThereMultiplePointers = (...args) => {
     return false;
 }
 
+const areThereSets = (...args) => {
+    return new Set(args).size !== args.length;
+}
+
 console.log(areThereDuplicates(1, 2, 3)); // False
 console.log(areThereDuplicates(1, 2, 2)); // TRUE
 console.log(areThereDuplicates('a', 'b', 'c', 'a')); // TRUE
